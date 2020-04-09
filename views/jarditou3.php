@@ -1,5 +1,5 @@
 <?php
-include("assets/php/headerJarditou.php");
+include("headerJarditou.php");
 
 ?>
 
@@ -28,8 +28,8 @@ include("assets/php/headerJarditou.php");
     <hr>
   </article>
 <?php
-include("assets/php/headerCaroussel.php");
+include("headerCaroussel.php");
 ?>
 <?php
-include("assets/php/footer.php")
+include("footer.php")
 ?>

@@ -2,7 +2,7 @@
 
 
 <?php
-include("assets/php/headerJarditou.php");
+include("headerJarditou.php");
 ?>
 <body xmlns="http://www.w3.org/1999/html">
 <?php
@@ -96,5 +96,5 @@ else {
 
 <?php
 
-include("assets/php/footer.php");
+include("footer.php");
 ?>

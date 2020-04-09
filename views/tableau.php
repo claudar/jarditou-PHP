@@ -1,8 +1,8 @@
     <?php
 
-    include("assets/php/headerJarditou.php");
+    include("headerJarditou.php");
     //  Requete
-    require "connexion_bdd.php"; // Inclusion de notre bibliothèque de fonctions
+    require "../models/connexion_bdd.php"; // Inclusion de notre bibliothèque de fonctions
     $db = connexionBase(); // Appel de la fonction de connexion
     $requete = "SELECT pro_prix, pro_libelle, pro_id, pro_photo, pro_ref, pro_description, pro_d_ajout, pro_d_modif, pro_bloque FROM produits ORDER BY pro_id";
     $result = $db->query($requete);
@@ -28,7 +28,7 @@
 
                         <?php echo $row->pro_prix . "€"; ?>
                     </p>
-                    <form class="marque col-4 text-center" action="details.php" method="post">
+                    <form class="marque col-4 text-center" action="../views/details.php" method="post">
                         <input type="hidden" name="proID" value="<?php echo $row->pro_id; ?>">
                         <!-- je met un bouton hidden pour recup les infos en fonction de l'id  que j'ai choisi et qui recuperera sa valeur -->
                         <input class="btn btn-link" type="submit" name="Detail" value="modifier">
@@ -38,7 +38,7 @@
                      aria-labelledby="heading<?php echo $row->pro_id; ?>" data-parent="#accordionExample">
                     <div class="row card-body">
                         <ins class="ReducImg col-6"><img class="img-thumbnail"
-                                                         src="assets/img/<?php echo $row->pro_id; ?>.<?php echo $row->pro_photo; ?>"
+                                                         src="../assets/img/<?php echo $row->pro_id; ?>.<?php echo $row->pro_photo; ?>"
                                                          alt="Grande Photo"></ins>
                         <p class="col-5 offset-1">
                             <ins class="categTab row mb-3"><?php echo $row->pro_ref; ?></ins>
@@ -59,6 +59,6 @@
 
 
     <?php
-    include("assets/php/footer.php");
+    include("footer.php");
 
 ?>

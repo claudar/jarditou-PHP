@@ -1,5 +1,5 @@
 <?php
-include("assets/php/headerJarditou.php");
+include("headerJarditou.php");
 
 ?>
 
@@ -122,5 +122,5 @@ include("assets/php/headerJarditou.php");
 
 
 <?php
-include("assets/php/footer.php")
+include("footer.php")
 ?>

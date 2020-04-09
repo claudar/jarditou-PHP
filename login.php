@@ -42,7 +42,7 @@ if (isset($_POST['submit']) || isset($_POST["submit1"]))  //on verifie si la var
             {
                 $_SESSION["role"] = "utilisateur";
             }
-            header('Refresh: 3; URL=inscription.php'); // je rajoute un header location pour bien etre redirigé sur la page d'accueil du site et non sur la page login php si l'utilisateur est deja connu
+            header('Refresh: 3; URL=../views/inscription.php'); // je rajoute un header location pour bien etre redirigé sur la page d'accueil du site et non sur la page login php si l'utilisateur est deja connu
 
 
 
@@ -99,7 +99,7 @@ if (isset($_POST['submit']) || isset($_POST["submit1"]))  //on verifie si la var
         // include du mail en html
         include_once 'mail.php';
         mail($array_user[':email'], 'Jarditou Config - confirmation de compte', $message, $aHeaders);
-        header('Refresh: 3; URL=inscription.php'); // je rajoute un header location pour bien etre redirigé sur la page d'accueil du site et non sur la page login php si l'utilisateur est deja connu
+        header('Refresh: 3; URL=../views/inscription.php'); // je rajoute un header location pour bien etre redirigé sur la page d'accueil du site et non sur la page login php si l'utilisateur est deja connu
 
         }
 
